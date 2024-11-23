@@ -1,4 +1,32 @@
+:root{
+  --main-color: hsl(0, 36%, 70%);
+  --secodary-color:hsl(0, 93%, 68%);
+  --natural-color:hsl(0, 6%, 24%);
+  --grad-color:linear,135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+  --grad-color2:Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+}
 
+ /* # Colors
+
+### Primary
+
+- Desaturated Red: hsl(0, 36%, 70%)
+- Soft Red: hsl(0, 93%, 68%)
+
+### Neutral
+
+- Dark Grayish Red: hsl(0, 6%, 24%)
+
+### Gradients
+
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)*/
+body {
+  background:rgba(255, 192, 203, 0.4);
+}
+/* .container {
+  background-image:var(--grad-color2);
+} */
 .logo-main{
   padding:10px;
   margin-right: 10px;
@@ -13,12 +41,14 @@
     padding-top:5px;
     padding-right:20px;
     background-color:transparent;
-    border:3px solid pink;
+    border:3px solid var(--main-color);
 }
 .logo {
     line-height: -55px;
     padding-right:10px;
     margin-right: 10px;
+    font-family: "Young Serif", serif;
+    font-size: 12px;
 }
 .image{
   width:40%;
@@ -26,11 +56,35 @@
 
 }
 
+h1 {
+  
+}
+.sub {
+  color:var(--main-color);
+  font-family: "Outfit", serif;
+}
+.sub ,h1{
+  font-size:50px;
+  letter-spacing:15px;
+ 
+  
+}
+p{
+    color: var(--main-color);
+    font-size: 16px;
+    font-family: "Young Serif", serif;
+}
 .info{
   display: flex;
   flex-direction: row-reverse;
+}
  .info2{
  
+ }
+ #email-req{
+
+ }
+ .click-req{
 
  }
 
@@ -108,23 +162,8 @@
 
 
 
- /* # Colors
 
-### Primary
-
-- Desaturated Red: hsl(0, 36%, 70%)
-- Soft Red: hsl(0, 93%, 68%)
-
-### Neutral
-
-- Dark Grayish Red: hsl(0, 6%, 24%)
-
-### Gradients
-
-- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
-- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
-
-## Typography
+/* ## Typography
 
 ### Body Copy
 
@@ -133,4 +172,4 @@
 ### Font
 
 - Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
-- Weights: 300, 400, 600 */
+- Weights: 300, 400, 600  */
