@@ -1,4 +1,153 @@
-:root{
+/* @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"); */
+:root {
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
+  --body-font: "Josefin Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge ???*/
+  scrollbar-width: none; /* for Firefox  ???*/
+  overflow-y: scroll; /* ????   */
+  box-sizing: border-box;
+  font-family: var(--body-font);
+}
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera ???*/
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 57.5% 1fr;/*???*/
+  min-height: 100vh; /*??? */
+}
+
+.logo {
+  height: 2.3rem;/* ???*/
+  max-width: 100%;
+}
+
+/* Info Section */
+.info-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 4rem 10.2rem;
+  gap: 1rem;
+  background: url("images/bg-pattern-desktop.svg"), linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  background-size: cover;
+  justify-content: space-evenly;
+}
+
+h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline;
+  color: var(--dark-grayish-red);
+  letter-spacing: 1.1rem;
+  line-height: 4.2rem;
+}
+
+h1 span {
+  color: var(--desaturated-red);
+  font-weight: 300;
+}
+
+.info-section p {
+  position: relative;
+  color: var(--desaturated-red);
+  line-height: 1.8rem;
+  font-weight: 400;
+  width: 85%;
+  padding-top: 1.2rem;
+}
+.text-section {
+  max-width: 550px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* :root{
   --main-color: hsl(0, 36%, 70%);
   --secodary-color:hsl(0, 93%, 68%);
   --natural-color:hsl(0, 6%, 24%);
@@ -6,21 +155,7 @@
   --grad-color2:Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
 }
 
- /* # Colors
-
-### Primary
-
-- Desaturated Red: hsl(0, 36%, 70%)
-- Soft Red: hsl(0, 93%, 68%)
-
-### Neutral
-
-- Dark Grayish Red: hsl(0, 6%, 24%)
-
-### Gradients
-
-- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
-- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)*/
+ /* 
 body {
   background:hsla(0, 36%, 70%, 0.3);
  
@@ -90,8 +225,6 @@ p{
  height:40px;
  text-align: left;
 }
-
-
 .click-req{
  margin-top: 10px;
  margin-right: 10px;
@@ -106,10 +239,6 @@ p{
  left:39%;
 }
 @media (min-width:320px) {
-   
-
-
-
 }
 
 .young-serif-regular {
@@ -122,47 +251,13 @@ p{
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-  }  
-
-
-
-
-
-
-
+  }
 @media (min-width:375px) {
-    }
-  
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 @media (min-width:1440px) {
 
 }
-
-
-
-
-
 
 .attribution {
     font-size: 11px;
@@ -174,7 +269,7 @@ p{
  }
 
 
-
+ */
 
 /* ## Typography
 
@@ -186,3 +281,18 @@ p{
 
 - Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
 - Weights: 300, 400, 600  */
+/* # Colors
+
+### Primary
+
+- Desaturated Red: hsl(0, 36%, 70%)
+- Soft Red: hsl(0, 93%, 68%)
+
+### Neutral
+
+- Dark Grayish Red: hsl(0, 6%, 24%)
+
+### Gradients
+
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)*/
