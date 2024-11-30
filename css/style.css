@@ -72,227 +72,135 @@ h1 span {
 .text-section {
   max-width: 550px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* :root{
-  --main-color: hsl(0, 36%, 70%);
-  --secodary-color:hsl(0, 93%, 68%);
-  --natural-color:hsl(0, 6%, 24%);
-  --grad-color:linear,135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
-  --grad-color2:Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
-}
-
- /* 
-body {
-  background:hsla(0, 36%, 70%, 0.3);
- 
-}
-.container{
+/* Input Section */
+.input-section {
+  position: relative;
+  width: 90%;
+  height: 3rem;
   display: flex;
+  flex-direction: row;
+  margin-top: 2.6rem;
 }
 
-.logo-main{
-  display: flex;
+.input-field {
+  border-color: var(--desaturated-red);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 25px;
+  width: 100%;
+  padding: 1.7rem;
+  overflow: hidden;
+  background-color: transparent;
+  font-family: var(--body-font);
 }
-.logo-main .circle-logo{
-  width:8px;
-  height:4px;
-  background-color:transparent;
-  border:3px solid var(--main-color);
-  border-radius: 50%;
-  padding:15px;
-}
-
-.image{
-  width:60%;
-  min-height:400px;
-  margin:-10px;
-
-  
+.input-field::placeholder {
+  font-family: var(--body-font);
 }
 
-.sub {
-  color:var(--main-color);
-}
-.sub ,h1{
-  font-size:50px;
-  letter-spacing:15px;
-  font-family: "Outfit", serif;
-  font-optical-sizing: auto;
-  font-weight:lighter;
-  font-style:normal;
- 
-  
-}
-p{
-    color: var(--main-color);
-    font-size: 16px;
-    font-family: "Young Serif", serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height:1.4;
-}
-.info{
-  display: flex;
-  flex-direction: row-reverse;
+.btn {
+  cursor: pointer;
+  position: absolute;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  width: 23%;
+  height: 3.5rem;
+  border: none;
+  border-radius: 25px;
+  overflow: hidden;
+  transition: all ease-in-out 0.3s;
 }
 
-.info2{
-  margin: auto;
-  padding-top:20px;
-  padding-right: 10px;
-}
-#email-req{
- margin-top: 10px;
- margin-right: 10px;
- padding:10px;
- color:var(--main-color);
- border-radius: 35px;
- width:90%;
- height:40px;
- text-align: left;
-}
-.click-req{
- margin-top: 10px;
- margin-right: 10px;
- padding:10px;
- background-color:var(--main-color);
- border-radius:30px;
- width:8%;
- height:60px;
- border-color: transparent;
- position:fixed;
- top:70%;
- left:39%;
-}
-@media (min-width:320px) {
+.arrow-img {
+  background-image: url("/images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 auto;
 }
 
-.young-serif-regular {
-    font-family: "Young Serif", serif;
-    font-weight: 400;
-    font-style: normal;
+.error-msg {
+  display: none;
+  position: absolute;
+  color: var(--soft-red);
+  top: 130%;
+  left: 5%;
+  font-size: 0.8rem;
+}
+
+.error {
+  display: none;
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  right: 25%;
+}
+.error-icon {
+  background-image: url("/images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+/* IMG Section */
+.img-section {
+  background-image: url("/images/hero-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+@media (hover: hover) {
+  .btn:hover {
+    -webkit-box-shadow: -1px 16px 17px -6px rgba(0, 0, 0, 0.51);
+    box-shadow: -1px 16px 17px -6px rgba(0, 0, 0, 0.51);
+    transition: all ease-in-out 0.3s;
   }
-  .outfit-uniquifier {
-    font-family: "Outfit", serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
+}
+
+@media screen and (max-width: 1025px) {
+  .main-container {
+    grid-template-columns: 50% 1fr;
   }
-@media (min-width:375px) {
 }
 
-@media (min-width:1440px) {
+@media screen and (max-width: 900px) {
+  .info-section {
+    display: initial;
+  }
 
+  .main-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 15% 50% 1fr;
+    grid-template-areas:
+      "icon"
+      "hero"
+      "info";
+  }
+
+  .img-section {
+    grid-area: hero;
+  }
+
+  .logo {
+    position: absolute;
+    grid-area: icon;
+    top: 5%;
+    left: 5%;
+  }
+
+  .info-section {
+    grid-area: info;
+    position: initial;
+    padding: 5rem 2rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
 }
-
-.attribution {
-    font-size: 11px;
-     text-align: center; 
-}
-
-.attribution a   { 
-   color: hsl(228, 45%, 44%);
- }
-
-
- */
-
-/* ## Typography
-
-### Body Copy
-
-- Font size: 16px
-
-### Font
-
-- Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
-- Weights: 300, 400, 600  */
-/* # Colors
-
-### Primary
-
-- Desaturated Red: hsl(0, 36%, 70%)
-- Soft Red: hsl(0, 93%, 68%)
-
-### Neutral
-
-- Dark Grayish Red: hsl(0, 6%, 24%)
-
-### Gradients
-
-- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
-- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)*/
